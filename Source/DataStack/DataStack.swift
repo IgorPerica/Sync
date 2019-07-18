@@ -311,6 +311,37 @@ import CoreData
         }
     }
 
+    @objc public func newDrop(completion: ((_ error: NSError?) -> Void)? = nil) {
+        self.writerContext.performAndWait {
+            self.writerContext.reset()
+
+            self.mainContext.performAndWait {
+                self.mainContext.reset()
+
+                self.persistentStoreCoordinator.performAndWait {
+                    for store in self.persistentStoreCoordinator.persistentStores {
+                        guard let storeURL = store.url else { continue }
+                        do {
+                            if #available(iOS 9.0, *) {
+                                try self.persistentStoreCoordinator.destroyPersistentStore(at: storeURL,
+                                                                                           ofType: NSSQLiteStoreType,
+                                                                                           options: nil)
+                            } else {
+                                try self.oldDrop(storeURL: storeURL)
+                            }
+                        } catch {
+                            completion?(error as NSError)
+                        }
+                    }
+
+                    DispatchQueue.main.async {
+                        completion?(nil)
+                    }
+                }
+            }
+        }
+    }
+
     // Required for iOS 8 Compatibility.
     func oldDrop(storeURL: URL) throws {
         let storePath = storeURL.path
