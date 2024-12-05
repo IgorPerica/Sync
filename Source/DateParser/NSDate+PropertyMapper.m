@@ -25,7 +25,7 @@
     }
 
     NSISO8601DateFormatter *formatter = [[NSISO8601DateFormatter alloc] init];
-    formatter.formatOptions = NSISO8601DateFormatWithInternetDateTime | NSISO8601DateFormatWithFractionalSeconds;
+    formatter.formatOptions = NSISO8601DateFormatWithInternetDateTime;
     return [formatter dateFromString:dateString];
 }
 
