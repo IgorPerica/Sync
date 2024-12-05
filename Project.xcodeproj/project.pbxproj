@@ -731,6 +731,10 @@
 		60802B5C21E411E200307B88 /* inital-ordered-many-to-many-update.json in Resources */ = {isa = PBXBuildFile; fileRef = 60802B5921E411C500307B88 /* inital-ordered-many-to-many-update.json */; };
 		60802B5D21E41A1200307B88 /* ordered-many-to-many-update.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60802B5221E40A3500307B88 /* ordered-many-to-many-update.xcdatamodeld */; };
 		60802B5E21E41A1300307B88 /* ordered-many-to-many-update.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 60802B5221E40A3500307B88 /* ordered-many-to-many-update.xcdatamodeld */; };
+		7872B01C2D01C7E400857075 /* ISO8601Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7872B01B2D01C7E400857075 /* ISO8601Date.swift */; };
+		7872B01D2D01C7E400857075 /* ISO8601Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7872B01B2D01C7E400857075 /* ISO8601Date.swift */; };
+		7872B01E2D01C7E400857075 /* ISO8601Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7872B01B2D01C7E400857075 /* ISO8601Date.swift */; };
+		7872B01F2D01C7E400857075 /* ISO8601Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7872B01B2D01C7E400857075 /* ISO8601Date.swift */; };
 		CC86E0A120216FCC00AA0947 /* 447.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC86E09F20216FCC00AA0947 /* 447.xcdatamodeld */; };
 		CC86E0A220216FCC00AA0947 /* 447.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC86E09F20216FCC00AA0947 /* 447.xcdatamodeld */; };
 		CC86E0A320216FCC00AA0947 /* 447.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC86E09F20216FCC00AA0947 /* 447.xcdatamodeld */; };
@@ -1077,6 +1081,7 @@
 		60802B5021E4089700307B88 /* ordered-many-to-many-update-update.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "ordered-many-to-many-update-update.json"; sourceTree = "<group>"; };
 		60802B5321E40A3500307B88 /* update-ordered-many-to-many.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "update-ordered-many-to-many.xcdatamodel"; sourceTree = "<group>"; };
 		60802B5921E411C500307B88 /* inital-ordered-many-to-many-update.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "inital-ordered-many-to-many-update.json"; sourceTree = "<group>"; };
+		7872B01B2D01C7E400857075 /* ISO8601Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISO8601Date.swift; sourceTree = "<group>"; };
 		CC86E0A020216FCC00AA0947 /* 413.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 413.xcdatamodel; sourceTree = "<group>"; };
 		CC86E0A420216FF300AA0947 /* primary-key-organizations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "primary-key-organizations.json"; sourceTree = "<group>"; };
 		CC86E0A520216FF300AA0947 /* 447.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 447.json; sourceTree = "<group>"; };
@@ -1493,6 +1498,7 @@
 			children = (
 				14D93BFE1E4E65C700DED595 /* NSDate+PropertyMapper.h */,
 				14D93BFF1E4E65C700DED595 /* NSDate+PropertyMapper.m */,
+				7872B01B2D01C7E400857075 /* ISO8601Date.swift */,
 			);
 			path = DateParser;
 			sourceTree = "<group>";
@@ -2331,6 +2337,7 @@
 				14241EA31DBC3A6F0042ED81 /* NSManagedObjectContext+Sync.swift in Sources */,
 				14549A0B1E7C2E1000A77F2E /* Sync+Helpers.swift in Sources */,
 				14241EA41DBC3A6F0042ED81 /* Sync.swift in Sources */,
+				7872B01C2D01C7E400857075 /* ISO8601Date.swift in Sources */,
 				142CD2B11DEF3A01002FDABE /* Sync+NSPersistentContainer.swift in Sources */,
 				44CFE68B1E87BC650068185B /* Inflections.m in Sources */,
 				14AF6AFE1DFC3D88009E5BC4 /* SyncResult.swift in Sources */,
@@ -2359,6 +2366,7 @@
 				14549A0E1E7C2E1000A77F2E /* Sync+Helpers.swift in Sources */,
 				14241EAB1DBC3A770042ED81 /* NSManagedObjectContext+Sync.swift in Sources */,
 				14241EAC1DBC3A770042ED81 /* Sync.swift in Sources */,
+				7872B01F2D01C7E400857075 /* ISO8601Date.swift in Sources */,
 				14D525621E7C1EC30063909F /* Sync+NSManagedObjectContext.swift in Sources */,
 				44CFE68E1E87BC650068185B /* Inflections.m in Sources */,
 				142CD2B21DEF3A01002FDABE /* Sync+NSPersistentContainer.swift in Sources */,
@@ -2387,6 +2395,7 @@
 				14549A0C1E7C2E1000A77F2E /* Sync+Helpers.swift in Sources */,
 				14241EB31DBC3A7F0042ED81 /* NSManagedObjectContext+Sync.swift in Sources */,
 				14241EB41DBC3A7F0042ED81 /* Sync.swift in Sources */,
+				7872B01D2D01C7E400857075 /* ISO8601Date.swift in Sources */,
 				14D525601E7C1EC30063909F /* Sync+NSManagedObjectContext.swift in Sources */,
 				44CFE68C1E87BC650068185B /* Inflections.m in Sources */,
 				142CD2B31DEF3A01002FDABE /* Sync+NSPersistentContainer.swift in Sources */,
@@ -2415,6 +2424,7 @@
 				14549A0D1E7C2E1000A77F2E /* Sync+Helpers.swift in Sources */,
 				14241EBB1DBC3A880042ED81 /* NSManagedObjectContext+Sync.swift in Sources */,
 				14241EBC1DBC3A880042ED81 /* Sync.swift in Sources */,
+				7872B01E2D01C7E400857075 /* ISO8601Date.swift in Sources */,
 				14D525611E7C1EC30063909F /* Sync+NSManagedObjectContext.swift in Sources */,
 				44CFE68D1E87BC650068185B /* Inflections.m in Sources */,
 				142CD2B41DEF3A01002FDABE /* Sync+NSPersistentContainer.swift in Sources */,

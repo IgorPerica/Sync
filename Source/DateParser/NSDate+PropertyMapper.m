@@ -1,4 +1,5 @@
 #import "NSDate+PropertyMapper.h"
+#import "Sync/Sync-Swift.h"
 
 @implementation NSDate (PropertyMapper)
 
@@ -24,9 +25,8 @@
         return nil;
     }
 
-    NSISO8601DateFormatter *formatter = [[NSISO8601DateFormatter alloc] init];
-    formatter.formatOptions = NSISO8601DateFormatWithInternetDateTime;
-    return [formatter dateFromString:dateString];
+    ISO8601DateParser *parser = [[ISO8601DateParser alloc] init];
+    return [parser parseISO8601DateWithDateAsString:dateString];
 }
 
 + (NSDate *)dateFromUnixTimestampNumber:(NSNumber *)unixTimestamp {
