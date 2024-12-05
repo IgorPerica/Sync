@@ -8,11 +8,16 @@
 import Foundation
 
 @objc public class ISO8601DateParser: NSObject {
-    @objc public func parseISO8601Date(dateAsString: String) -> Date? {
-        // Attempt to parse the ISO8601 date string
+
+    static let sharedInstance = ISO8601DateParser()
+    let dateFormatter: ISO8601DateFormatter = {
         let formatter = ISO8601DateFormatter()
         formatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        return formatter
+    }()
 
-        return formatter.date(from: dateAsString)
+    @objc public class func parseISO8601Date(dateAsString: String) -> Date? {
+        // Attempt to parse the ISO8601 date string
+        return sharedInstance.dateFormatter.date(from: dateAsString)
     }
 }

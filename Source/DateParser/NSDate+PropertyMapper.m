@@ -9,7 +9,10 @@
     DateType dateType = [dateString dateType];
     switch (dateType) {
         case iso8601: {
-            parsedDate = [self dateFromISO8601String:dateString];
+            if (!dateString || [dateString isEqual:[NSNull null]]) {
+                parsedDate = nil;
+            }
+            parsedDate = [ISO8601DateParser parseISO8601DateWithDateAsString:dateString];
         } break;
         case unixTimestamp: {
             parsedDate = [self dateFromUnixTimestampString:dateString];
@@ -25,8 +28,7 @@
         return nil;
     }
 
-    ISO8601DateParser *parser = [[ISO8601DateParser alloc] init];
-    return [parser parseISO8601DateWithDateAsString:dateString];
+    return [ISO8601DateParser parseISO8601DateWithDateAsString:dateString];
 }
 
 + (NSDate *)dateFromUnixTimestampNumber:(NSNumber *)unixTimestamp {
